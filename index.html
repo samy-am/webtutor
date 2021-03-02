@@ -1,0 +1,314 @@
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+</head>
+<style>
+    .fabrica{
+        font-family: 'Neucha', cursive;
+    }
+
+    .INJECTED_DESK_BLOCK { color:#f00;padding:50px; visibility: visible;}
+    .INJECTED_DESK_BLOCK .IDB_IN { padding:10px; border-radius: 10px; background:#395094; color:#fff; font-size:1.6em;}
+    .IDB_IN{position:relative; top: 200px;}
+    .IDB_TABLE { border-collapse: collapse; color:#3C4D5A; width:100% ; }
+    .IDB_TABLE tr td:first-child { text-align: left; padding:5px 8px 5px 0px; width:200px;}
+    .IDB_TABLE tr td:first-child+* { text-align: left; padding:5px 8px 5px 0px; }
+    .IDB_TABLE tr  { margin:0px 5px 0px 0px; }
+
+    .menu_btn_tabs{width:max-content; float: right; z-index:999999;}
+    .menu_btn_tabs  td{color: #fff; font-weight: 800; font-size: 1.3em; padding-right:10px; cursor:pointer;}
+    .menu_btn_tabs  div{cursor:pointer; min-height:50px;}
+
+
+    .MENU_BTN .PC_VIEW{cursor:pointer;}
+    #zagolovok{
+        border: 1px solid ;
+        width:100%;
+    }
+    #wt-header-middle-bg3 {
+        min-height: 0px !important;
+    }
+    .fabrica{
+        min-height: 500px;
+        background-color:#1E90FF;
+
+    }
+    .modalFi{
+        display:none;
+        position:fixed;
+        top:60px;
+        right:50px;
+        opasity:0.6;
+        background-color:#ccc;
+        color:#fff;
+        font-size:1.6em;
+        padding: 10px;
+        z-index:50000;
+    }
+    h1{
+        text-align: center;
+        color: #fff;
+        font-size:32px;
+        margin-top:10px;
+    }
+    .pizzZ{
+        width:100%;
+        position: relative;
+        /*background: url("test/road.png") 50% 27% no-repeat;*/
+        background-size: cover;
+        padding-top:1px;
+    }
+    .pizzman{
+        position: relative;
+        bottom:90px;
+        z-index:2;
+    }
+    .pizzman img {
+        width:40%;
+    }
+    .opisanieIdom{
+        display: inline-block;
+        color:#fff;
+        font-size: 1.6em;
+        text-align:right;
+        z-index:5;
+        position:relative;
+    }
+    .sBtn{
+        margin-top:10px;
+        position: absolute;
+    }
+    .opisanieIdom img {
+        margin:0 10px;
+    }
+    .IDB_TABLE td{
+        font-size: 2.6em;
+    }
+    .bonus_opisanie{
+        text-align: right;
+        font-size: 2.8em;
+        font-weight: bold;
+        color: #fff;
+        padding-right: 5%;
+        position: absolute;
+        right: 0;
+        top: 170px;
+    }
+
+    @media screen and (max-width: 1000px){
+        .pizzman{
+            top:20px;
+        }
+        .bonus_opisanie{
+            text-align: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            padding-right: 2%;
+            position: absolute;
+            right: 0;
+            top: 100px;
+        }
+        .pizzZ{
+            /*background: url("test/road.png") 50% 90% no-repeat;*/
+            background-size: 100% 100%;
+        }
+        .INJECTED_DESK_BLOCK {bottom:0px;}
+
+    }
+    @media screen and (max-width: 500px){
+        .pizzZ{
+            width:100%;
+            position: relative;
+            /*background: url("test/road.png") 50% 27% no-repeat;*/
+            background-size: cover;
+            padding-top:0;
+        }
+        .opisanieIdom{
+            display: inline-block;
+            color:#fff;
+            font-size: 1.6em;
+            text-align:right;
+            z-index:5;
+            position:relative;
+            visibility: hidden;
+        }
+        .bonus_opisanie{
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            padding-right: 1%;
+            position: absolute;
+            right: 0;
+            top: 100px;
+        }
+        .pizzman{
+            top:0px;
+        }
+        .INJECTED_DESK_BLOCK .IDB_IN { padding:20px; border-radius: 10px; background:#395094; color:#fff; font-size:18px;}
+        .INJECTED_DESK_BLOCK {bottom:0px; width:90%; margin:0;padding:20px;}
+        .IDB_TABLE td{
+            font-size: 16px;
+        }
+        h1{
+            margin-top:0px;
+            padding-top:10px;
+        }
+        .pizzman img {
+            width:45%;
+        }
+    }
+</style>
+<body>
+<div class="fabrica">
+    <div class="menu_btn_tabs">
+        <table>
+            <tr>
+                <td>
+                    <div class="MENU_BTN PC_VIEW" onclick="GOGO('/custom_web_template.html?object_id=6895828247182406308')">О банке идей</div>
+                </td>
+                <td>
+                    <div class="MENU_BTN PC_VIEW" onclick="GOGO('/custom_web_template.html?object_id=6895828247182406302')">Мои идеи</div>
+                </td>
+                <td>
+                    <div class="MENU_BTN PC_VIEW" onclick="GOGO('/custom_web_template.html?object_id=6895828247182406302')">Победители</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="INJECT_CONTAINER">
+        <div class="INJECTED_DESK_BLOCK" style="">
+            <div class="IDB_IN">
+                <span>Напиши нам о своей идее</span>
+                <div style="background:#fff; padding:15px; border-radius: 8px;">
+                    <table class="IDB_TABLE" id="DATA_TO_DB">
+                        <tr>
+                            <td style="width:10%; table-layout: fixed;">Название</td>
+                            <td><input type="text" id="zagolovok" required ></td>
+                        </tr>
+                        <tr>
+                            <td style="width:10%; table-layout: fixed;">Описание</td>
+                            <td><textarea required style="width:100%; height:50px;" value="Описание" required></textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="sBtn" align="center"><input type="button" onclick="_SAVE_DATA_()" value="Сохранить"/></div>
+        </div>
+    </div>
+
+    <div class="modalFi">Данные сохранены!</div>
+
+</div>
+
+</body>
+<script>
+
+    /* function _OpenFrameByAJAX_(url) {
+         var _CURRENT_URL_ = "<%=Main_Link_for_Ajax%>";
+
+         console.log(111, _CURRENT_URL_);
+         console.log(1111, inject_div_id);
+         console.log(112, current_link);
+         var INJECT_DIV = document.getElementById(inject_div_id);
+         console.log('тело', INJECT_DIV);
+
+         var SEND_OBJ = {};
+
+         SEND_OBJ.render_type = render_type;
+
+         console.log(114, SEND_OBJ);
+
+         if (extra_string!="" && extra_string!=null && extra_string!=undefined) {
+             SEND_OBJ.extra_string = extra_string;
+         }
+         $.ajax({
+             url: "/custom_web_template.html?object_id=6895828247182406302",
+             data: SEND_OBJ,
+             type: 'post',
+             success: function(response) {
+                 $(INJECT_DIV).html(response);
+             }
+         });
+     }*/
+
+    function GOGO(url) {
+        $.ajax({
+            url: url,
+            // data: {"name":"Sam"},
+            type: 'post',
+            success: function(response) {
+                $("#INJECT_CONTAINER").html(response);
+            }
+        });
+    }
+    // GOGO('/custom_web_template.html?object_id=6895828247182406302');
+
+    function _SAVE_DATA_() {
+        modalFI();
+        setTimeout(function(){
+            document.querySelector('.modalFi').style.display = 'none';
+        }, 3000);
+        var EXTRA_STRING = "";
+        var _ParseAllArray_ = document.getElementById("DATA_TO_DB").getElementsByTagName("tr");
+
+        _zaGol_= document.querySelector("#zagolovok").value;
+        _Opisanie_= document.querySelector("textarea").value;
+        for (a=0; a<_ParseAllArray_.length; a++) {
+            _TR_ = _ParseAllArray_[a];
+
+            EXTRA_STRING +=_zaGol_+"***";
+            EXTRA_STRING +=_Opisanie_;
+            break;
+
+            if (a!=(_ParseAllArray_.length-1)) { EXTRA_STRING+="+++"; }
+        }
+        // _OpenFrameByAJAX_('INJECT_CONTAINER_INVISIBLE', 'SAVE_DB', true, EXTRA_STRING);
+        save_to_DB(EXTRA_STRING)
+        var x = document.querySelector("textarea");
+        x.value="";
+        var y = document.querySelector("#zagolovok");
+        y.value="";
+    }
+
+    function modalFI(){
+        document.querySelector('.modalFi').style.display = 'block';
+    }
+
+    function save_to_DB(EXTRA_STRING) {
+
+        try {
+            EXTRA_STRING = Request.Query.extra_string + "";
+        } catch (no) {
+            EXTRA_STRING = "";
+        }
+
+        _CheckCollabs_ = XQuery("for $elem in cc_fabrica_udeis return $elem");
+
+        _FIO_ = curUserID;
+
+        if (EXTRA_STRING != '***') {
+
+            function SAVE_RESULT(_msg_, _name_, _sotrudnik_) {
+                _NEWDOC_ = OpenNewDoc('x-local://udt/udt_cc_fabrica_udei.xmd');
+
+                _NEWDOC_.TopElem.field_3 = _msg_;
+                _NEWDOC_.TopElem.field_2 = _name_;
+                _NEWDOC_.TopElem.field_1 = _sotrudnik_;
+                _NEWDOC_.TopElem.field_4 = Date();
+                _NEWDOC_.BindToDb(DefaultDb);
+                _NEWDOC_.Save();
+            }
+        }
+        QUESTIONS_ARR = EXTRA_STRING.split("+++");
+        for (AAA in QUESTIONS_ARR) {
+            QST_ANSWR = AAA + "";
+            QST_ANSWR = QST_ANSWR.split("***");
+            QST = QST_ANSWR[0];
+            ANSWR = QST_ANSWR[1];
+            SAVE_RESULT(QST, ANSWR, _FIO_);
+        }
+    }
+</script>
+
